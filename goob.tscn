@@ -28,4 +28,5 @@ shape = SubResource("SphereShape3D_n2ar3")
 stream = ExtResource("4_73175")
 
 [connection signal="body_entered" from="GrabArea" to="." method="_on_grab_area_body_entered"]
+[connection signal="body_exited" from="GrabArea" to="." method="_on_grab_area_body_exited"]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
