@@ -13,7 +13,7 @@ func _process(delta):
 
 
 func _input(event):
-	if grabable and event.is_action_pressed("interact"):
+	if grabable and event.is_action_pressed("interact") and not collected:
 		Gamemanager.goob_counter += 1
 		collected = true
 		$Fläche.visible = false
