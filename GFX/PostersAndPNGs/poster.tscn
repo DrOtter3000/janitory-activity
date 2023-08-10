@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3bihc6w8l3o6"]
+
+[ext_resource type="Texture2D" uid="uid://cntmp23pwxeqm" path="res://GFX/PostersAndPNGs/PosterLuiroi.png" id="1_6agew"]
+
+[node name="Poster" type="Sprite3D"]
+transform = Transform3D(-1.39876e-09, 0, 0.032, 0, 0.032, 0, -0.032, 0, -1.39876e-09, -4.49192, 1.92489, 1.58473)
+transparent = false
+shaded = true
+double_sided = false
+texture = ExtResource("1_6agew")

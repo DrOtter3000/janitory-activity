@@ -1,0 +1,102 @@
+[gd_scene load_steps=8 format=3 uid="uid://rf0m4qmm38a2"]
+
+[ext_resource type="PackedScene" uid="uid://d2j8o4s3jjgok" path="res://GFX/Enemy/glb_Source/Enemy.glb" id="1_8px22"]
+[ext_resource type="Script" path="res://game_over_screen.gd" id="1_cgpj7"]
+[ext_resource type="Material" uid="uid://dwvy7c20mnk5i" path="res://GFX/Materials/Enemy_material.tres" id="3_moa8p"]
+[ext_resource type="AudioStream" uid="uid://brotvhr2bwokv" path="res://SFX/GO_piano.mp3" id="4_qoccm"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kbki5"]
+sky_top_color = Color(0.027451, 0.0117647, 0.0235294, 1)
+sky_horizon_color = Color(0.556863, 0.545191, 0.539132, 1)
+ground_horizon_color = Color(0.556863, 0.545191, 0.539132, 1)
+
+[sub_resource type="Sky" id="Sky_cbb27"]
+sky_material = SubResource("ProceduralSkyMaterial_kbki5")
+
+[sub_resource type="Environment" id="Environment_nin2b"]
+background_mode = 2
+background_energy_multiplier = 0.34
+sky = SubResource("Sky_cbb27")
+tonemap_mode = 2
+glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_albedo = Color(0.513726, 0.180392, 0.211765, 1)
+volumetric_fog_emission_energy = 422.68
+
+[node name="GameOverScreen" type="Node3D"]
+script = ExtResource("1_cgpj7")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_nin2b")
+
+[node name="Enemy" parent="." instance=ExtResource("1_8px22")]
+transform = Transform3D(-0.051447, 0, -0.998676, 0.0376751, 0.999288, -0.00194084, 0.997965, -0.0377251, -0.0514104, 0, 0.812, -0.778)
+
+[node name="Belly" parent="Enemy" index="0"]
+transform = Transform3D(0.218683, 0, -5.58794e-09, 0, 0.437366, 0, 0, 0, 0.306157, 0.0638028, 0.00774312, 0.0164186)
+surface_material_override/0 = ExtResource("3_moa8p")
+
+[node name="Mouth" parent="Enemy" index="1"]
+transform = Transform3D(0.270823, 0.021706, -2.79397e-09, -0.0477533, 0.123101, 0, 1.86265e-09, 3.49246e-10, 0.2, 0.0928613, 0.623444, 0.0164186)
+surface_material_override/0 = ExtResource("3_moa8p")
+
+[node name="Head" parent="Enemy" index="2"]
+transform = Transform3D(0.210922, -0.00393054, 1.885e-06, 0.00393054, 0.210922, -0.000202483, 1.885e-06, 0.000202483, 0.210959, -0.00929576, 0.727597, 0.0164186)
+surface_material_override/0 = ExtResource("3_moa8p")
+
+[node name="Leg_left" parent="Enemy" index="3"]
+transform = Transform3D(0.05, 9.31323e-10, 0, 0, 0.140954, 0.017101, 6.98492e-10, -0.0513031, 0.0469847, 0.00767457, -0.510203, 0.216419)
+surface_material_override/0 = ExtResource("3_moa8p")
+
+[node name="Leg_right" parent="Enemy" index="4"]
+transform = Transform3D(0.05, -9.31323e-10, 0, 0, 0.140954, -0.017101, 6.98492e-10, 0.0513031, 0.0469847, 0.00767469, -0.510203, -0.183582)
+surface_material_override/0 = ExtResource("3_moa8p")
+
+[node name="Food_right" parent="Enemy" index="5"]
+transform = Transform3D(0.234924, 0, 0.0513031, 0, 0.05, 0, -0.0855051, 0, 0.140954, 0.0576748, -0.651703, -0.233582)
+surface_material_override/0 = ExtResource("3_moa8p")
+
+[node name="Food_left" parent="Enemy" index="6"]
+transform = Transform3D(0.234923, 0, -0.0513031, 0, 0.05, 0, 0.0855052, 0, 0.140954, 0.0576746, -0.651703, 0.266419)
+surface_material_override/0 = ExtResource("3_moa8p")
+
+[node name="Belly_001" parent="Enemy" index="7"]
+transform = Transform3D(0.25, 0, -3.72529e-09, -1.86265e-09, 0.5, 1.16415e-10, 6.51926e-09, -5.82077e-11, 0.350001, 0.020872, 0.0392977, 0.0157387)
+surface_material_override/0 = ExtResource("3_moa8p")
+
+[node name="Eye_right" parent="Enemy" index="8"]
+transform = Transform3D(0.700001, 0, -3.72529e-09, 0, 1, 0, 7.45058e-09, 0, 0.700001, 0.17283, 0.748374, -0.0535814)
+surface_material_override/0 = ExtResource("3_moa8p")
+
+[node name="Eye_left" parent="Enemy" index="9"]
+transform = Transform3D(0.700001, 0, -3.72529e-09, 0, 1, 0, 7.45058e-09, 0, 0.700001, 0.17283, 0.748374, 0.0864186)
+surface_material_override/0 = ExtResource("3_moa8p")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Enemy"]
+stream = ExtResource("4_qoccm")
+autoplay = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.95881, -0.284049, 0, 0.284049, 0.95881, 0, 1.23466, 0)
+current = true
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.479841, -0.877356, 0, 0.877356, 0.479841, 0, -0.757262, 0.454208)
+light_energy = 0.75
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+transform = Transform3D(0.983713, -0.151597, 0.0965778, 0, 0.5373, 0.843391, -0.179747, -0.829655, 0.528549, 1.09161, 2.63477, 0.556122)
+light_energy = 0.75
+
+[node name="ShakyTimer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 7.5
+autostart = true
+
+[connection signal="timeout" from="ShakyTimer" to="." method="_on_shaky_timer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+
+[editable path="Enemy"]

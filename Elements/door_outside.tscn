@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwot7mpcafd2d"]
+
+[ext_resource type="PackedScene" uid="uid://byh81l3aa4lt7" path="res://Elements/door_inside.tscn" id="1_35p1a"]
+[ext_resource type="Texture2D" uid="uid://kndtdwvtkhno" path="res://GFX/Textures/mtl_wall01_c.png" id="2_2pfhx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_axpxg"]
+albedo_texture = ExtResource("2_2pfhx")
+albedo_texture_force_srgb = true
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_obwhr"]
+albedo_texture = ExtResource("2_2pfhx")
+albedo_texture_force_srgb = true
+uv1_scale = Vector3(1.01, 1.01, 1.01)
+uv1_triplanar = true
+
+[node name="Door_Outside" instance=ExtResource("1_35p1a")]
+
+[node name="Door" parent="door" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_axpxg")
+
+[node name="Inside" parent="door" index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_obwhr")

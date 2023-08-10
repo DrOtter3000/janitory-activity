@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c583re0u1vqru"]
+
+[ext_resource type="PackedScene" uid="uid://w3bwmfq61bjn" path="res://GFX/Furniture/glb_Files/monitor.glb" id="1_lro3a"]
+
+[node name="monitor" instance=ExtResource("1_lro3a")]

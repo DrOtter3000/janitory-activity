@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://kvlu7oy6yvvd"]
+
+[ext_resource type="PackedScene" uid="uid://catqq1ihd2uhm" path="res://GFX/Furniture/glb_Files/lamp.glb" id="1_i812x"]
+[ext_resource type="Script" path="res://GFX/Furniture/lamp.gd" id="2_jimpd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h03fx"]
+albedo_color = Color(1, 1, 0.815686, 0)
+
+[node name="lamp" instance=ExtResource("1_i812x")]
+script = ExtResource("2_jimpd")
+
+[node name="Sphere" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_h03fx")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.281248, 0)
+shadow_enabled = true
+omni_range = 6.0
+
+[node name="FlickerTimer" type="Timer" parent="." index="2"]
+one_shot = true
+
+[connection signal="timeout" from="FlickerTimer" to="." method="_on_flicker_timer_timeout"]

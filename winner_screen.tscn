@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhfb4ffh6d7hq"]
+
+[ext_resource type="Script" path="res://winner_screen.gd" id="1_hn071"]
+[ext_resource type="Texture2D" uid="uid://6pp1dlyowlq7" path="res://GFX/PostersAndPNGs/Rainbowflag.png" id="2_1kjty"]
+[ext_resource type="AudioStream" uid="uid://bxo8timwckpai" path="res://SFX/Partyhorn.wav" id="3_kvcqn"]
+
+[node name="WinnerScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hn071")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("2_1kjty")
+expand_mode = 1
+
+[node name="LblWinner" type="Label" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 1216.0
+offset_bottom = 668.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 108
+text = "Yey, you won, great. The freakin Pengoinduck didn't kill you. Nice."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="FeelYourselfTimer" type="Timer" parent="."]
+wait_time = 26.0
+autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_kvcqn")
+autoplay = true
+
+[connection signal="timeout" from="FeelYourselfTimer" to="." method="_on_feel_yourself_timer_timeout"]

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://tarua1ev3rgo"]
+
+[ext_resource type="PackedScene" uid="uid://cjlj63iy0omj2" path="res://GFX/Furniture/glb_Files/deskchair.glb" id="1_he50n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1lug2"]
+size = Vector3(0.457908, 0.7912, 0.429962)
+
+[node name="deskchair" instance=ExtResource("1_he50n")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="14"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.37739, 0)
+shape = SubResource("BoxShape3D_1lug2")

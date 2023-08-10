@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://sk3gt2bc7leg"]
+
+[ext_resource type="Script" path="res://gui.gd" id="1_jcg6e"]
+[ext_resource type="Texture2D" uid="uid://iiytkvp0mvhm" path="res://GFX/PostersAndPNGs/Goob.png" id="2_5xkl8"]
+
+[node name="GUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jcg6e")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LblAction" type="Label" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = 624.0
+offset_right = 720.0
+offset_bottom = 1344.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_5xkl8")
+
+[node name="GoobCounter" type="Label" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 648.0
+offset_right = 120.0
+offset_bottom = 674.0
+text = "0 / 5"

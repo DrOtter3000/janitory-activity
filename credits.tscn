@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwvc3cdthu8xx"]
+
+[ext_resource type="Script" path="res://Credits.gd" id="1_fxbg6"]
+[ext_resource type="Texture2D" uid="uid://bkeku4sgi5nxb" path="res://GFX/PostersAndPNGs/BG3.png" id="2_yrwge"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fxbg6")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -224.0
+offset_top = -16.0
+offset_right = 1736.0
+offset_bottom = 1104.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_yrwge")
+
+[node name="LblCredittext" type="Label" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 1216.0
+offset_bottom = 624.0
+theme_override_font_sizes/font_size = 45
+text = "Credits:
+Sounds are all from freesound.org and CC0 licensed. Thanks goes to my whole cozy COMMUNITY. The jam hadn't been so much fun, without you. Very special thanks goes to sachs3nchris, for this great GOOB-Model. Oh yes and thanks to WhiskeyDing0 for hosting the jam. "
+autowrap_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 640.0
+offset_right = 1264.0
+offset_bottom = 704.0
+alignment = 2
+
+[node name="BtnBack" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "Back"
+
+[connection signal="pressed" from="HBoxContainer/BtnBack" to="." method="_on_btn_back_pressed"]

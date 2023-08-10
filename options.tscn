@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://xqivukuop4nq"]
+
+[ext_resource type="Script" path="res://options.gd" id="1_i7hwn"]
+[ext_resource type="Texture2D" uid="uid://dlohqr3lmq0ye" path="res://GFX/PostersAndPNGs/BG2.png" id="2_33pgd"]
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i7hwn")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -144.0
+offset_top = -8.0
+offset_right = 1775.0
+offset_bottom = 1072.0
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_33pgd")
+
+[node name="OptionBox" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 896.0
+offset_bottom = 704.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="OptionBox"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="LblFullscreen" type="Label" parent="OptionBox/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "Fullscreen: "
+
+[node name="BtnFullscreen" type="Button" parent="OptionBox/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "On"
+
+[node name="BtnWindowed" type="Button" parent="OptionBox/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "Off"
+
+[node name="BtnBack" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1080.0
+offset_top = 592.0
+offset_right = 1262.0
+offset_bottom = 703.0
+theme_override_font_sizes/font_size = 45
+text = "Back"
+
+[connection signal="pressed" from="OptionBox/HBoxContainer/BtnFullscreen" to="." method="_on_btn_fullscreen_pressed"]
+[connection signal="pressed" from="OptionBox/HBoxContainer/BtnWindowed" to="." method="_on_btn_windowed_pressed"]
+[connection signal="pressed" from="BtnBack" to="." method="_on_btn_back_pressed"]

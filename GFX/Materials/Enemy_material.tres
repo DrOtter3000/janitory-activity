@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dwvy7c20mnk5i"]
+
+[ext_resource type="Texture2D" uid="uid://bn6y01ioxh6dm" path="res://GFX/Textures/rock 4.png" id="1_44arq"]
+
+[resource]
+albedo_texture = ExtResource("1_44arq")
+albedo_texture_force_srgb = true
+uv1_triplanar = true
+uv1_world_triplanar = true

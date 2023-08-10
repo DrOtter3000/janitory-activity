@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bk0vspvuo5d50"]
+
+[ext_resource type="Script" path="res://Elements/lightswitch.gd" id="1_fyn0w"]
+[ext_resource type="AudioStream" uid="uid://dcujur0r83elg" path="res://SFX/switch.wav" id="2_s81ke"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rvyxx"]
+size = Vector3(0.0385332, 0.0703277, 0.296441)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wc3w2"]
+size = Vector3(0.05, 0.05, 0.01)
+
+[node name="Lightswitch" type="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0)
+script = ExtResource("1_fyn0w")
+lightgroup = "LG_Office_1"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.154592)
+shape = SubResource("BoxShape3D_rvyxx")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_wc3w2")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.998933, 0.0461824, 0, -0.0461824, 0.998933, 0, 0, 0.0080415)
+mesh = SubResource("BoxMesh_wc3w2")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_s81ke")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

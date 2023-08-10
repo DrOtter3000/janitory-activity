@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://qu4uu40vkwy"]
+
+[ext_resource type="PackedScene" uid="uid://dujapevfc2hyl" path="res://GFX/Goob/Goob.dae" id="1_nvok3"]
+[ext_resource type="Script" path="res://goob.gd" id="2_eb0h0"]
+[ext_resource type="Texture2D" uid="uid://dmc4slb1w68j" path="res://GFX/Goob/Goob.png" id="2_h5npn"]
+[ext_resource type="AudioStream" uid="uid://b65cdt2p64yjh" path="res://SFX/Plop.mp3" id="4_73175"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d8iwg"]
+albedo_texture = ExtResource("2_h5npn")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_n2ar3"]
+radius = 0.642954
+
+[node name="Goob" instance=ExtResource("1_nvok3")]
+script = ExtResource("2_eb0h0")
+
+[node name="Fläche" parent="." index="0"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0.22486, 0)
+material_override = SubResource("StandardMaterial3D_d8iwg")
+
+[node name="GrabArea" type="Area3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GrabArea" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.247018, 0)
+shape = SubResource("SphereShape3D_n2ar3")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
+stream = ExtResource("4_73175")
+
+[connection signal="body_entered" from="GrabArea" to="." method="_on_grab_area_body_entered"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

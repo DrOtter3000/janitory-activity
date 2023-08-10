@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://42d1bwda78gf"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_6lwsr"]
+[ext_resource type="PackedScene" uid="uid://ciiq8ln5funf8" path="res://camera.tscn" id="2_oofph"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_og8cw"]
+radius = 0.25
+height = 1.8
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_e5bbo"]
+height = 1.7
+
+[sub_resource type="SphereMesh" id="SphereMesh_26aye"]
+radius = 0.15
+height = 0.3
+
+[node name="Player" type="CharacterBody3D" groups=["Player"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("1_6lwsr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00141025, 0)
+shape = SubResource("CapsuleShape3D_og8cw")
+
+[node name="Camera3D" parent="." instance=ExtResource("2_oofph")]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 0.996437, 0.0843387, 0, -0.0843387, 0.996437, 0, 0.0822268, 0.041)
+light_energy = 0.0
+shadow_enabled = true
+spot_range = 10.0912
+spot_angle = 39.5076
+
+[node name="Belly" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.7, 0, 0, 0, 1, 0, 0, 0, 0.35, 0, -0.0123957, 0.304903)
+mesh = SubResource("CapsuleMesh_e5bbo")
+
+[node name="Head" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00375229, 0.887594, 0.290535)
+mesh = SubResource("SphereMesh_26aye")
+
+[node name="LightTimer" type="Timer" parent="."]
+wait_time = 5.0
+
+[node name="FloorDetectionRayCast" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.640213, 0)
+
+[node name="WalkingSoundSFX" type="AudioStreamPlayer3D" parent="."]
+
+[node name="FlashlightSFX" type="AudioStreamPlayer3D" parent="."]
+
+[connection signal="timeout" from="LightTimer" to="." method="_on_light_timer_timeout"]
+[connection signal="finished" from="WalkingSoundSFX" to="." method="_on_audio_stream_player_3d_finished"]
