@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://bac14ub6hffyd"]
+[gd_scene load_steps=35 format=3 uid="uid://bac14ub6hffyd"]
 
 [ext_resource type="Texture2D" uid="uid://csfu2q6jefvho" path="res://GFX/Textures/conc_base02_c.png" id="1_o55ue"]
 [ext_resource type="Script" path="res://Buildings/cantina.gd" id="1_oqdc3"]
@@ -10,8 +10,11 @@
 [ext_resource type="PackedScene" uid="uid://b4xx7ivo4tu6f" path="res://GFX/Furniture/chair.tscn" id="7_mceux"]
 [ext_resource type="PackedScene" uid="uid://ddctf128dttpb" path="res://GFX/Furniture/table.tscn" id="8_7cqh2"]
 [ext_resource type="PackedScene" uid="uid://kvlu7oy6yvvd" path="res://GFX/Furniture/lamp.tscn" id="9_4xiy3"]
+[ext_resource type="PackedScene" uid="uid://bnwy2wjcfc53u" path="res://Elements/kitchen_1.tscn" id="10_djeso"]
 [ext_resource type="PackedScene" uid="uid://bk0vspvuo5d50" path="res://Elements/lightswitch.tscn" id="10_lewml"]
+[ext_resource type="PackedScene" uid="uid://drt5j2ljygtn2" path="res://GFX/Furniture/pot.tscn" id="11_jjcxh"]
 [ext_resource type="PackedScene" uid="uid://qu4uu40vkwy" path="res://goob.tscn" id="11_ps6wf"]
+[ext_resource type="Texture2D" uid="uid://tvkhghxefl2x" path="res://GFX/PostersAndPNGs/oven.png" id="12_yhgpi"]
 [ext_resource type="PackedScene" uid="uid://d3bihc6w8l3o6" path="res://GFX/PostersAndPNGs/poster.tscn" id="13_tsqtf"]
 [ext_resource type="Texture2D" uid="uid://b7c74d135ulak" path="res://GFX/PostersAndPNGs/Chester.png" id="14_xr54k"]
 [ext_resource type="Texture2D" uid="uid://6pp1dlyowlq7" path="res://GFX/PostersAndPNGs/Rainbowflag.png" id="15_gjcwm"]
@@ -271,6 +274,22 @@ transform = Transform3D(-0.998973, 0, 0.0453107, 0, 1, 0, -0.0453107, 0, -0.9989
 [node name="Table" parent="Furniture/SittingCorner6" instance=ExtResource("8_7cqh2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.203846, 0, 0.935894)
 
+[node name="Kitchen1" parent="Furniture" instance=ExtResource("10_djeso")]
+transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 1.45628, 0.474751, -8.21761)
+
+[node name="Pot" parent="Furniture/Kitchen1" instance=ExtResource("11_jjcxh")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.409374, 1.35871, -0.853076)
+
+[node name="Pot2" parent="Furniture/Kitchen1" instance=ExtResource("11_jjcxh")]
+transform = Transform3D(0.177922, 0, 0.271892, 0, 0.14, 0, -0.381556, 0, 0.126785, 0.00913811, 0.929644, 0.504368)
+
+[node name="Pot3" parent="Furniture/Kitchen1" instance=ExtResource("11_jjcxh")]
+transform = Transform3D(0.177922, 0, 0.271892, 0, 0.14, 0, -0.381556, 0, 0.126785, 0.00913811, 0.174337, 3.22479)
+
+[node name="Sprite3D" type="Sprite3D" parent="Furniture/Kitchen1"]
+transform = Transform3D(-2.18557e-08, -0.5, 2.18557e-08, 0, -2.18557e-08, -0.5, 0.5, -2.18557e-08, 9.55343e-16, -0.0429554, 0.808762, -4.04113)
+texture = ExtResource("12_yhgpi")
+
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75886, 0, 6.83905)
 
@@ -337,7 +356,7 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0462
 lightgroup = "Cantina_Group_2"
 
 [node name="Goob" parent="." instance=ExtResource("11_ps6wf")]
-transform = Transform3D(-0.751759, 0, -0.659438, 0, 1, 0, 0.659438, 0, -0.751759, 2.72259, 0.261075, -7.62212)
+transform = Transform3D(-0.751759, 0, -0.659438, 0, 1, 0, 0.659438, 0, -0.751759, 2.72259, 0.261075, -4.79424)
 
 [node name="Poster" parent="." instance=ExtResource("13_tsqtf")]
 transform = Transform3D(-1.39876e-09, 0, 0.032, 0, 0.032, 0, -0.032, 0, -1.39876e-09, -1.39917, 1.68111, 5.48123)

@@ -1437,6 +1437,21 @@ transform = Transform3D(0.660814, 0, -0.750549, 0, 1, 0, 0.750549, 0, 0.660814, 
 [node name="deskchair2" parent="Interior" instance=ExtResource("17_8d2ev")]
 transform = Transform3D(0.795886, 0, 0.605447, 0, 1, 0, -0.605447, 0, 0.795886, 9.58049, 0.310984, 0.31439)
 
+[node name="deskchair32" parent="Interior" instance=ExtResource("17_8d2ev")]
+transform = Transform3D(0.795886, 0, 0.605447, 0, 1, 0, -0.605447, 0, 0.795886, 9.58049, 0.310984, 8.75923)
+
+[node name="deskchair33" parent="Interior" instance=ExtResource("17_8d2ev")]
+transform = Transform3D(0.846007, 0, -0.533172, 0, 1, 0, 0.533172, 0, 0.846007, 7.17947, 0.310984, 8.75923)
+
+[node name="deskchair36" parent="Interior" instance=ExtResource("17_8d2ev")]
+transform = Transform3D(-0.117329, 0, -0.993093, 0, 1, 0, 0.993093, 0, -0.117329, 6.30464, 0.310984, 6.62874)
+
+[node name="deskchair34" parent="Interior" instance=ExtResource("17_8d2ev")]
+transform = Transform3D(-0.987287, 0, -0.158951, 0, 1, 0, 0.158951, 0, -0.987287, 5.80121, 0.310984, 11.0176)
+
+[node name="deskchair35" parent="Interior" instance=ExtResource("17_8d2ev")]
+transform = Transform3D(0.238551, 0, -0.971131, 0, 1, 0, 0.971131, 0, 0.238551, 9.39844, 0.310984, 11.0176)
+
 [node name="deskchair3" parent="Interior" instance=ExtResource("17_8d2ev")]
 transform = Transform3D(0.886082, 0, 0.463528, 0, 1, 0, -0.463528, 0, 0.886082, 9.58049, 0.310984, -2.01043)
 

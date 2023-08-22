@@ -14,6 +14,9 @@ data = PackedVector3Array(-1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1,
 
 [node name="wall_door_inside" instance=ExtResource("1_s8yww")]
 
+[node name="Cube" parent="." index="0"]
+gi_lightmap_scale = 1
+
 [node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0"]

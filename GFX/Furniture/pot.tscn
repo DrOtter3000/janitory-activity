@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://drt5j2ljygtn2"]
+
+[ext_resource type="PackedScene" uid="uid://cncdoslecpdop" path="res://GFX/Furniture/glb_Files/Pot.glb" id="1_3am6e"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y60p2"]
+albedo_color = Color(0.368627, 0.368627, 0.431373, 1)
+metallic = 0.34
+
+[node name="Pot" instance=ExtResource("1_3am6e")]
+
+[node name="Cylinder" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_y60p2")
+
+[node name="Torus" parent="." index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_y60p2")
