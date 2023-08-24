@@ -199,9 +199,6 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.9078
 [node name="Lights" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00463867, 0, -0.000295877)
 
-[node name="lamp" parent="Lights" groups=["LG_Office_1"] instance=ExtResource("7_o2t5y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.97173, -1.78014)
-
 [node name="lamp3" parent="Lights" groups=["LG_Office_1"] instance=ExtResource("7_o2t5y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.57281, 2.97173, -1.78014)
 

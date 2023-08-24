@@ -301,17 +301,14 @@ shape = SubResource("BoxShape3D_bwiy3")
 transform = Transform3D(0.823305, -0.5676, 0, 0.5676, 0.823305, 0, 0, 0, 1, -0.123034, -0.321822, -14.7688)
 shape = SubResource("BoxShape3D_bwiy3")
 
-[node name="lamp" parent="." groups=["Cantina_Group_1"] instance=ExtResource("9_4xiy3")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, 3, -0.0804133)
-
 [node name="lamp8" parent="." groups=["Cantina_Group_1"] instance=ExtResource("9_4xiy3")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, 3, -6.23974)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, 3, -4.74493)
 
 [node name="lamp7" parent="." groups=["Cantina_Group_2"] instance=ExtResource("9_4xiy3")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2, 3, -6)
 
 [node name="lamp2" parent="." groups=["Cantina_Group_1"] instance=ExtResource("9_4xiy3")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, 3, 3.5)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, 3, 2.45734)
 
 [node name="lamp3" parent="." groups=["Cantina_Group_3"] instance=ExtResource("9_4xiy3")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3, 3, 5)
