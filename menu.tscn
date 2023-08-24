@@ -63,6 +63,16 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 45
 text = "Exit"
 
+[node name="LblVersion" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1136.0
+offset_top = 686.0
+offset_right = 1272.0
+offset_bottom = 712.0
+pivot_offset = Vector2(56, 16)
+text = "Version 1.1"
+horizontal_alignment = 2
+
 [connection signal="pressed" from="VBoxContainer/BtnPlay" to="." method="_on_btn_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/BtnOptions" to="." method="_on_btn_options_pressed"]
 [connection signal="pressed" from="VBoxContainer/BtnCredits" to="." method="_on_btn_credits_pressed"]
