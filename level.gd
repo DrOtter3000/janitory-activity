@@ -1,8 +1,10 @@
 extends Node3D
 
+
 @export var new_goob : PackedScene
 @export var number_of_goobs_on_map = 7
 @onready var possible_spawn_points = $SpawnPoints/GoobSpawnPoints.get_children()
+
 
 func _ready():
 	Gamemanager.flashlight_status = 2
@@ -27,6 +29,8 @@ func add_goobs_to_map():
 		var goober = new_goob.instantiate()
 		add_child(goober)
 		goober.global_position = spawn_point.position
+		possible_spawn_points.erase(spawn_point)
+		
 
 
 func check_for_winning_conditions():
