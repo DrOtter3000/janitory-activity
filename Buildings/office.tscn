@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://mxsdwuuu0rl4"]
+[gd_scene load_steps=40 format=3 uid="uid://mxsdwuuu0rl4"]
 
 [ext_resource type="PackedScene" uid="uid://nru14sufmsyd" path="res://Elements/wall_window_outside.tscn" id="1_l4tjt"]
 [ext_resource type="Script" path="res://Buildings/office.gd" id="1_y70yg"]
@@ -18,7 +18,9 @@
 [ext_resource type="PackedScene" uid="uid://cckktqvqtrub" path="res://GFX/Furniture/mouse.tscn" id="15_tt2li"]
 [ext_resource type="PackedScene" uid="uid://b35a3ersb8n8s" path="res://GFX/Furniture/keyboard.tscn" id="16_odlnb"]
 [ext_resource type="PackedScene" uid="uid://qu4uu40vkwy" path="res://goob.tscn" id="17_hxnih"]
+[ext_resource type="PackedScene" uid="uid://dj1mtu0oxdmbs" path="res://GFX/Furniture/toilet.tscn" id="18_dn5vh"]
 [ext_resource type="PackedScene" uid="uid://d3bihc6w8l3o6" path="res://GFX/PostersAndPNGs/poster.tscn" id="19_3n2od"]
+[ext_resource type="PackedScene" uid="uid://d2ecd32yr8537" path="res://GFX/Furniture/sink.tscn" id="19_fxxq1"]
 [ext_resource type="Texture2D" uid="uid://6pp1dlyowlq7" path="res://GFX/PostersAndPNGs/Rainbowflag.png" id="20_xwgbg"]
 [ext_resource type="Texture2D" uid="uid://ciuv1rl8s4cji" path="res://GFX/PostersAndPNGs/PosterMaxFluffy.png" id="21_jgbdw"]
 [ext_resource type="Texture2D" uid="uid://b8jv8tj2pr6gm" path="res://GFX/PostersAndPNGs/DrOtter1Poster.png" id="21_o0gr2"]
@@ -409,6 +411,12 @@ transform = Transform3D(0.999843, 0, -0.0177142, 0, 1, 0, 0.0177142, 0, 0.999843
 
 [node name="Keyboard7" parent="Furniture" instance=ExtResource("16_odlnb")]
 transform = Transform3D(-0.0557169, 0, -0.998447, 0, 1, 0, 0.998447, 0, -0.0557169, 0.657684, 0.720657, -5.12032)
+
+[node name="toilet" parent="Furniture" instance=ExtResource("18_dn5vh")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 3.84775, 0.152456, -4.19605)
+
+[node name="sink" parent="Furniture" instance=ExtResource("19_fxxq1")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 1.43532, -0.391979, -4.53339)
 
 [node name="Lightswitch2" parent="." instance=ExtResource("8_qp1sn")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.57843, 1.4, 3.798)

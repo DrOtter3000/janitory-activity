@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2ecd32yr8537"]
+
+[ext_resource type="PackedScene" uid="uid://dwub4hswimm6c" path="res://GFX/Furniture/glb_Files/sink.glb" id="1_djwyn"]
+
+[node name="sink" instance=ExtResource("1_djwyn")]
