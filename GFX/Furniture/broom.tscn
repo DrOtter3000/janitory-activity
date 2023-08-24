@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dt6mxt3gvuwb1"]
+
+[ext_resource type="PackedScene" uid="uid://8fsuxw0ij4lh" path="res://GFX/Furniture/glb_Files/broom.glb" id="1_a8m6o"]
+
+[node name="broom" instance=ExtResource("1_a8m6o")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)

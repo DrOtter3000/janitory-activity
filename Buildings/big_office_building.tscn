@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=3 uid="uid://co0c3hcnyfuvv"]
+[gd_scene load_steps=79 format=3 uid="uid://co0c3hcnyfuvv"]
 
 [ext_resource type="Texture2D" uid="uid://csfu2q6jefvho" path="res://GFX/Textures/conc_base02_c.png" id="1_ct5h0"]
 [ext_resource type="Script" path="res://Buildings/big_office_building.gd" id="1_lfm41"]
@@ -26,6 +26,8 @@
 [ext_resource type="Texture2D" uid="uid://b8jv8tj2pr6gm" path="res://GFX/PostersAndPNGs/DrOtter1Poster.png" id="23_jk4nf"]
 [ext_resource type="Texture2D" uid="uid://ofabrrmacay6" path="res://GFX/PostersAndPNGs/Skaifox.png" id="24_mqi7h"]
 [ext_resource type="Texture2D" uid="uid://cntmp23pwxeqm" path="res://GFX/PostersAndPNGs/PosterLuiroi.png" id="24_mt5m7"]
+[ext_resource type="PackedScene" uid="uid://dt6mxt3gvuwb1" path="res://GFX/Furniture/broom.tscn" id="27_35ksl"]
+[ext_resource type="PackedScene" uid="uid://th67hy32stxf" path="res://GFX/Furniture/bucket.tscn" id="28_us0xm"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_7c7fl"]
 size = Vector3(21, 0.25, 24)
@@ -1618,6 +1620,33 @@ texture = ExtResource("4_bd5w4")
 transform = Transform3D(-1.39876e-09, 0, 0.032, 0, 0.032, 0, -0.032, 0, -1.39876e-09, -10.2984, 1.92489, 7.75945)
 material_override = SubResource("StandardMaterial3D_7tkqc")
 texture = ExtResource("4_bd5w4")
+
+[node name="broom" parent="." instance=ExtResource("27_35ksl")]
+transform = Transform3D(0.147924, 0.0248707, 0, -0.0248707, 0.147924, 0, 0, 0, 0.15, 1.20429, 1.15322, -0.953359)
+
+[node name="bucket" parent="." instance=ExtResource("28_us0xm")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.921806, 0.452661, -1.47159)
+
+[node name="broom2" parent="." instance=ExtResource("27_35ksl")]
+transform = Transform3D(0.148082, -0.0239124, 0, 0.0239124, 0.148082, 0, 0, 0, 0.15, -1.13396, 1.289, 2.09466)
+
+[node name="bucket2" parent="." instance=ExtResource("28_us0xm")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.0478715, 0.442513, 2.57464)
+
+[node name="computer" parent="." instance=ExtResource("12_cy26q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0028, 0.299886, 5.64097)
+
+[node name="computer2" parent="." instance=ExtResource("12_cy26q")]
+transform = Transform3D(1, 0, 0, 0, 0.938806, 0.344446, 0, -0.344446, 0.938806, -9.99831, 0.354158, 5.34423)
+
+[node name="monitor" parent="." instance=ExtResource("13_ni1l0")]
+transform = Transform3D(0.778857, 0, 0.627202, 0, 1, 0, -0.627202, 0, 0.778857, -9.83106, 0.195354, 4.25583)
+
+[node name="monitor2" parent="." instance=ExtResource("13_ni1l0")]
+transform = Transform3D(0.943089, 0, 0.33254, 0, 1, 0, -0.33254, 0, 0.943089, -9.83106, 0.195354, 3.68046)
+
+[node name="monitor3" parent="." instance=ExtResource("13_ni1l0")]
+transform = Transform3D(-0.708463, 0, -0.705748, 0, 1, 0, 0.705748, 0, -0.708463, -9.83106, 0.195354, 4.67315)
 
 [editable path="WallsInside/wall_inside"]
 [editable path="WallsInside/wall_inside17"]

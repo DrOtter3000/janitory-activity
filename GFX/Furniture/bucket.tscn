@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://th67hy32stxf"]
+
+[ext_resource type="PackedScene" uid="uid://d0l3qrnr047ru" path="res://GFX/Furniture/glb_Files/bucket.glb" id="1_qq1y1"]
+
+[node name="bucket" instance=ExtResource("1_qq1y1")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
